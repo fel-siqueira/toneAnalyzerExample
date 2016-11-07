@@ -1,0 +1,22 @@
+{
+  "name": "cognitive",
+  "description": "",
+  "main": "server.js",
+  "authors": [
+    "Felipe Siqueira Pinheiro"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.8",
+    "materialize": "^0.97.8"
+  }
+}
