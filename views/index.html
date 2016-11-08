@@ -5,7 +5,12 @@
   <title>Cognitive</title>
 </head>
 <body ng-app="Cognitive" ng-controller="cognitiveCtrl">
-  <h1>Cognitive</h1>
-  <script src=""></script>
+  <input type="text" ng-model="texto">
+  <button type="button" ng-click="postText()">Trocar</button>
+  <script src="components/angular/angular.min.js"></script>
+  <script src="components/jquery/dist/jquery.min.js"></script>
+  <script src="components/materialize/dist/js/materialize.min.js"></script>
+  <script src="js/angular/app.js"></script>
+  <script src="js/angular/controllers/cognitiveCtrl.js"></script>
 </body>
 </html>

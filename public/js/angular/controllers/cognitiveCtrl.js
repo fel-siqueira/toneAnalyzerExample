@@ -1,8 +1,12 @@
 app.controller('cognitiveCtrl', ($scope, $http) => {
- function postText() {
-   var data = $scope.texto;
-  $http.post('/test', data).success( () => {
-    console.log('POST ' + data);
-  });
+
+  $scope.postText = function() {
+   data = JSON.stringify({texto: $scope.texto});
+   console.log('Sent: ' + data);
+   $http.post('/test', data).then(function(response){
+     console.log('Received: ' + response.data);
+   }, function(err) {
+    console.log(err);
+   }); 
  } 
 });
