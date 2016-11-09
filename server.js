@@ -13,6 +13,7 @@ const path = require('path');
 const cfenv = require('cfenv');
 const bodyParser = require('body-parser');
 const mongodb = require('./public/db');
+const cognitive = require('./public/js/cognitive');
 
 //Express startup
 var server = express();
@@ -49,6 +50,7 @@ server.post('/test', (req, res) => {
   var data = req.body;
   console.log('Received from Angular: ' + data.texto);
   res.send('POST to /test from NodeJS');
+  cognitive.toneAnalyze(data.texto);
 });
 
 //Starting the server, at cfenv port and the cfenv ip, then loggin the full path/url

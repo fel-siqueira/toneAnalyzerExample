@@ -1,1 +1,1 @@
-var app = angular.module('Cognitive', []);
+var app = angular.module('myApp', []);

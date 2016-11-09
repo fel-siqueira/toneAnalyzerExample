@@ -2,15 +2,52 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Cognitive</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boilerplate</title>
+
+  <!-- Importing the stylesheets -->
+  <link rel="stylesheet" href="http://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="components/materialize/dist/css/materialize.min.css" media="screen,projection">
+  <link rel="stylesheet" href="css/style.css">
+
 </head>
-<body ng-app="Cognitive" ng-controller="cognitiveCtrl">
-  <input type="text" ng-model="texto">
-  <button type="button" ng-click="postText()">Trocar</button>
+<body ng-app="myApp" ng-controller="toneAnalyzerCtrl">
+  <nav class="blue darken-3">
+    <div class="nav-wrapper">
+      <a class="brand-logo" href="#!">Boilerplate</a>
+      <a class="button-collapse" data-activates="mobile-demo" href="#"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="">Links</a></li>
+        <li><a href="">Links</a></li>
+        <li><a href="">Links</a></li>
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+        <li><a href="">Links</a></li>
+        <li><a href="">Links</a></li>
+        <li><a href="">Links</a></li>
+      </ul>
+    </div>
+  </nav>  
+  <div class="container analyzer-input">
+    <div class="row">
+      <form class="col s12" action="">
+        <div class="row">
+          <div class="center-align input-field col s12">
+            <textarea id="texto" class="materialize-textarea" ng-model="texto"></textarea>
+            <label for="texto">Input a text to analyze</label>
+            <button type="button" class="black-text light-green accent-4 btn waves-effect waves-light" 
+              ng-click="postText()">Analyze</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- Importing every script! -->
   <script src="components/angular/angular.min.js"></script>
   <script src="components/jquery/dist/jquery.min.js"></script>
   <script src="components/materialize/dist/js/materialize.min.js"></script>
+  <script src="js/style/script.js"></script>
   <script src="js/angular/app.js"></script>
-  <script src="js/angular/controllers/cognitiveCtrl.js"></script>
+  <script src="js/angular/controllers/toneAnalyzerCtrl.js"></script>
 </body>
 </html>
