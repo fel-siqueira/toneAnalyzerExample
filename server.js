@@ -4,32 +4,21 @@
  * path is a native module that normalizes the files paths
  * cfenv is a environment-variables-manager for Cloud Foundry environments
  * body-parser creates a 'body' attribute at the req, from http.post
- * mongodb is needed to connect to a MongoDB database, local or remote
- * assert is for unity tests, to throw errors
+ * mongod is the modularized connection to the remote database, this require imports the module and it's methods, like .dbConnect
+ * mongodb.dbConnect(dbUser, dbPassword) calls the method that connect to the remote database
  */
 const express = require('express');
 const morgan = require('morgan');
 const path = require('path');
 const cfenv = require('cfenv');
 const bodyParser = require('body-parser');
-const MongoClient = require('mongodb').MongoClient
-const assert = require('assert');
+const mongodb = require('./public/db');
 
 //Express startup
 var server = express();
 
-//MongoDB credentials
-var dbUser = 'fel-siqueira';
-var dbPassword = '1123';
-
-//Connecting to the remote MongoDB at mlab.com
-var url = 'mongodb://' + dbUser + ':' + dbPassword + '@ds149207.mlab.com:49207/mongotraining';
-MongoClient.connect(url, (err, db) => {
-  assert.equal(null, err);
-  console.log('Connected correctly to MongoDB server');
-
-  db.close();
-});
+// Method that initializes the remote database, that receives the dabase username, and the database password
+mongodb.dbConnect('fel-siqueira', '1123');
 
 //Setting the environment variables with the cfenv module
 var appEnv = cfenv.getAppEnv();
