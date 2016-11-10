@@ -49,8 +49,9 @@ server.get('/', (req, res) => {
 server.post('/test', (req, res) => {
   var data = req.body;
   console.log('Received from Angular: ' + data.texto);
-  res.send('POST to /test from NodeJS');
-  cognitive.toneAnalyze(data.texto);
+  cognitive.toneAnalyze(data.texto, function(response){
+    res.json(response);
+  });
 });
 
 //Starting the server, at cfenv port and the cfenv ip, then loggin the full path/url

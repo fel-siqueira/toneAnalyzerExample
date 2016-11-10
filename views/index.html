@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Boilerplate</title>
+  <title>Tone Analyzer Boilerplate</title>
 
   <!-- Importing the stylesheets -->
   <link rel="stylesheet" href="http://fonts.googleapis.com/icon?family=Material+Icons">
@@ -12,36 +12,40 @@
 
 </head>
 <body ng-app="myApp" ng-controller="toneAnalyzerCtrl">
-  <nav class="blue darken-3">
-    <div class="nav-wrapper">
-      <a class="brand-logo" href="#!">Boilerplate</a>
-      <a class="button-collapse" data-activates="mobile-demo" href="#"><i class="material-icons">menu</i></a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="">Links</a></li>
-        <li><a href="">Links</a></li>
-        <li><a href="">Links</a></li>
-      </ul>
-      <ul class="side-nav" id="mobile-demo">
-        <li><a href="">Links</a></li>
-        <li><a href="">Links</a></li>
-        <li><a href="">Links</a></li>
-      </ul>
-    </div>
-  </nav>  
-  <div class="container analyzer-input">
-    <div class="row">
-      <form class="col s12" action="">
-        <div class="row">
-          <div class="center-align input-field col s12">
-            <textarea id="texto" class="materialize-textarea" ng-model="texto"></textarea>
-            <label for="texto">Input a text to analyze</label>
-            <button type="button" class="black-text light-green accent-4 btn waves-effect waves-light" 
-              ng-click="postText()">Analyze</button>
+  <section>
+    <nav class="blue darken-3">
+      <div class="nav-wrapper">
+        <a class="brand-logo" href="#!">Tone Analyzer</a>
+        <a class="button-collapse" data-activates="mobile-demo" href="#"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="http://fel-siqueira.github.io" target="_blank">Know me</a></li>
+          <li><a href="http://www.ibm.com/watson/" target="_blank">IBM Watson</a></li>
+          <li><a href="https://github.com/watson-developer-cloud/node-sdk#tone-analyzer" target="_blank">API Reference</a></li>
+        </ul>
+        <ul class="side-nav" id="mobile-demo">
+          <li><a href="http://fel-siqueira.github.io" target="_blank">Know me</a></li>
+          <li><a href="http://www.ibm.com/watson/" target="_blank">IBM Watson</a></li>
+          <li><a href="https://github.com/watson-developer-cloud/node-sdk#tone-analyzer" target="_blank">API Reference</a></li>
+        </ul>
+      </div>
+    </nav>  
+    <div class="container analyzer-input">
+      <div class="row">
+        <form class="col s12" action="">
+          <div class="row">
+            <div class="center-align input-field col s12">
+              <textarea id="texto" class="textanalyze" ng-model="texto"></textarea>
+              <label for="texto">Input a text to analyze</label>
+              <button type="button" class="black-text light-green accent-4 btn waves-effect waves-light" 
+                ng-click="postText()">Analyze
+                <i class="material-icons right">send</i>
+              </button>
+            </div>
           </div>
-        </div>
-      </form>
+        </form>
+      </div>
     </div>
-  </div>
+  </section>
   <!-- Importing every script! -->
   <script src="components/angular/angular.min.js"></script>
   <script src="components/jquery/dist/jquery.min.js"></script>

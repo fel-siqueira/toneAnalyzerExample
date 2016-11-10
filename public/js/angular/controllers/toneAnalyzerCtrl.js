@@ -9,4 +9,7 @@ app.controller('toneAnalyzerCtrl', ($scope, $http) => {
     console.log(err);
    }); 
  } 
+
+
+  $scope.toArray
 });

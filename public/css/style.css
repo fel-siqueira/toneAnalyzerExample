@@ -1,4 +1,31 @@
+section {
+  height: 100vh; }
+
 .analyzer-input {
   margin-top: 80px; }
+
+.textanalyze {
+  background-color: transparent;
+  resize: none;
+  height: 250px;
+  width: 100%;
+  margin: 0 0 20px 0;
+  padding: .8rem 0 1.6rem 0;
+  font-size: 1em;
+  border: none;
+  border-bottom: 1px solid;
+  box-sizing: content-box;
+  outline: none; }
+
+.textanalyze:focus + label.active {
+  color: #26A69A; }
+
+.textanalyze:focus {
+  border-color: #26A69A;
+  box-shadow: 0 1px 0 0 #26A69A;
+  transition: all 0.3s; }
+
+.results {
+  margin-top: 50px; }
 
 /*# sourceMappingURL=style.css.map */

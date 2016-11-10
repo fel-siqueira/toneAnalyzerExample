@@ -8,7 +8,7 @@ var tone_analyzer = new ToneAnalyzerV3(
   }
 );
 
-exports.toneAnalyze = function(input){
+exports.toneAnalyze = function(input, response){
   tone_analyzer.tone(
     {
       text: input
@@ -18,7 +18,7 @@ exports.toneAnalyze = function(input){
       if(err)
         console.log(err);
       else
-        console.log(JSON.stringify(tone, null, 2));
+        response(JSON.stringify(tone, null, 2));
     }
   );
 }
