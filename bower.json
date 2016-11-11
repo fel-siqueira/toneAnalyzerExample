@@ -17,6 +17,7 @@
   ],
   "dependencies": {
     "angular": "^1.5.8",
-    "materialize": "^0.97.8"
+    "materialize": "^0.97.8",
+    "chart.js": "^2.3.0"
   }
 }
