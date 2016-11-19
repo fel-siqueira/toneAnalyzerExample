@@ -36,7 +36,7 @@
             <div class="center-align input-field col s12">
               <textarea id="texto" class="textanalyze" ng-model="texto"></textarea>
               <label for="texto">Input a text to analyze</label>
-              <button type="button" class="black-text light-green accent-4 btn waves-effect waves-light" 
+              <button type="button" id="Charts" class="black-text light-green accent-4 btn waves-effect waves-light" 
                 ng-click="postText()">Analyze
                 <i class="material-icons right">send</i>
               </button>
@@ -48,6 +48,7 @@
   </section>
   <section>
     <div class="center-align container results">
+      <a name="chartResults"></a>
       <h4>Results</h4>
       <canvas id="resultsChart"></canvas>
     </div>
