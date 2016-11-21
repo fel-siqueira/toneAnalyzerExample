@@ -1,4 +1,6 @@
 function generateChart(toneValues, toneNames) {
+  $("#resultsChart").remove();
+  $(".results").append('<canvas id="resultsChart"></canvas>');
   var ctx = document.getElementById("resultsChart");
   var resultsChart = new Chart(
     ctx,
