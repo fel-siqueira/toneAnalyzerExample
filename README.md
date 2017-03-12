@@ -10,4 +10,4 @@ node server.js
 ```
 Then, the url will be printed on the log:
 
-[localhost:6001](localhost:6001) or [localhost:6002](localhost:6002)
+[localhost:6001](http://localhost:6001) or [localhost:6002](http://localhost:6002)
