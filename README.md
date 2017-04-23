@@ -1,6 +1,6 @@
 # IBM Watson Tone Analyzer example
 
-Just coded a really simples example, using the Tone Analyzer API, from IBM Watson.
+Just coded a really simple example, using the Tone Analyzer API, from IBM Watson.
 
 ```
 git clone https://fel-siqueira/toneAnalyzerExample.git
